@@ -196,6 +196,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     private void transitionToSocialMediaActivity(){
         Intent intent = new Intent(MainActivity.this, SocialMediaActivity.class);
         startActivity(intent);
+        // finish pt a opri activitatea daca userul apasa back button
+        finish();
 
     }
 }

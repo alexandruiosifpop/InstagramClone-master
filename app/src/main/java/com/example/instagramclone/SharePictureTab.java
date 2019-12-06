@@ -138,7 +138,7 @@ public class SharePictureTab extends Fragment implements View.OnClickListener {
                                             FancyToast.SUCCESS, false).show();
                                 }
                                 else {
-                                    FancyToast.makeText(getContext(), "Picture upload failed", Toast.LENGTH_SHORT,
+                                    FancyToast.makeText(getContext(), "Picture upload failed \n"+ e.getMessage(), Toast.LENGTH_SHORT,
                                             FancyToast.ERROR, false).show();
                                 }
                                 dialog.dismiss();
@@ -148,10 +148,11 @@ public class SharePictureTab extends Fragment implements View.OnClickListener {
                     }
                 }
                 else {
-                    FancyToast.makeText(getContext(), "Error: Upload an image first", Toast.LENGTH_SHORT,
+                    FancyToast.makeText(getContext(), "Error: Upload an image first" , Toast.LENGTH_SHORT,
                             FancyToast.ERROR, false).show();
                 }
 
+                break;
         }
     }
 
@@ -196,6 +197,14 @@ public class SharePictureTab extends Fragment implements View.OnClickListener {
             if (resultCode == Activity.RESULT_OK){
 
                 //inseamna ca putem folosi o imagine
+
+                //FOLOSIM METODA ASTA CAND VREM SA ASIGNAM IMAGINEA
+                //DACA DOAR ALEGEM O IMAGINE AVEM SOLUTIA URMATOARE
+
+//                Uri selectedImage = data.getData();
+//                //get a bitmap object
+//                Bitmap bitmap = MediaStore.Images.Media
+//                        .getBitmap(this.getContentResolver(), selectedImage);
 
                 //Do something with the captured image
               try {

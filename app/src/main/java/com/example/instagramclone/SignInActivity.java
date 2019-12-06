@@ -84,5 +84,8 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
     private void transitionToSocialMediaActivity(){
         Intent intent = new Intent(SignInActivity.this, SocialMediaActivity.class);
         startActivity(intent);
+
+        // finish() pentru a opri activitatea daca userul da back
+        finish();
     }
 }
